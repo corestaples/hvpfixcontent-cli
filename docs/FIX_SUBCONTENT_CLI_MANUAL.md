@@ -343,7 +343,7 @@ needs it; only this script does, and only for the duration of a run.
    If Node isn't installed and your distro's package manager can't reach
    the internet directly, install it via your organisation's usual
    approved channel (NodeSource repo, snap, manually downloaded tarball,
-   etc.) — this tool has no opinion on how Node gets onto the box, only
+   etc.) — this script does not care on how Node gets onto the box, only
    that `node` (or the path you pass via `--node-path`) works.
 
 3. **Run the standalone Node self-test** (no Moodle/DB required — confirms
