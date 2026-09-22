@@ -803,14 +803,14 @@ request without needing to cross-reference the log file.
   the restored data. Use `--list-libraries` and your own DB backups to find
   candidates; this specific recovery path is inherently manual per #632's
   discussion thread.
-- **Idempotent, not clairvoyant, about upgrade hooks.** This tool relies on
+- **Idempotent, not psychic, about upgrade hooks.** This script tool relies on
   each library's own `upgrades.js` being idempotent-safe to run multiple
   times where relevant — the same assumption PR #642's server-side fix
   makes, and the same one `otacke` and `icc` debated at length in #633's
   thread. It does not independently verify every third-party content
-  type's upgrade hooks are side-effect-free on repeat application; if
-  you've patched `#633` and are running mod_hvp ≥ 1.28.4, you are running
-  the same upgrade pipeline this tool exercises.
+  type's upgrade hooks are side-effect-free on repeat application; **if
+  `you've patched `#633` and` are `running mod_hvp ≥ 1.28.4`, you are running
+  the same upgrade pipeline this tool exercises**.
 - **Root library version is intentionally left untouched.** This mirrors
   `fix_subcontent=1` exactly — the assumption is your root content type is
   already at the correct version (you upgraded it through the normal
