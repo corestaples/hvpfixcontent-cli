@@ -1,0 +1,15 @@
+{
+  "name": "mod-hvp-fix-subcontent-runner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Headless Node.js runner used by mod/hvp/cli/fix_subcontent.php to execute H5P upgrades.js content-upgrade hooks outside the browser.",
+  "main": "upgrade-runner.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node upgrade-runner.js",
+    "selftest": "node selftest.js"
+  },
+  "dependencies": {}
+}
