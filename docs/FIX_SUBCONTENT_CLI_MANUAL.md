@@ -833,7 +833,7 @@ request without needing to cross-reference the log file.
   proposed signature `php admin/cli/fix_h5p_subcontent.php --libraryid=<id>`)
   and is significantly simpler to reason about and test, but it means you
   don't get Moodle's own task-retry/concurrency machinery "for free" — this
-  tool's checkpoint/lock/resume mechanisms (§§8, 2.8) are a deliberate,
+  tool's checkpoint/lock/resume mechanisms (see [§2.8](#23-Concurrency-safeguards)) are a deliberate,
   independently-built substitute for that, not a port of it. Migrating the
   same runner into an adhoc-task-based dispatcher later is possible without
   touching `runner/` at all, since `node_bridge.php` has no dependency on
